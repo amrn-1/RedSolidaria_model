@@ -1,35 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package org.utl.dsm.redsolidaria.model;
 
-/**
- *
- * @author arlet
- */
 public class Servicio {
     private int idServicio;
     private String titulo;
     private String descripcion;
     private int modalidad; // 1-Presencial, 2-Virtual, 3-Mixto
     private int estatus; // 0-Inactivo, 1-Activo, 2-Eliminado
-    private Categoria categoria;
-    private Usuario usuario;
+    private int idUsuario; // Agregar idUsuario directamente
 
-    public Servicio(int idServicio, String titulo, String descripcion, int modalidad, int estatus, Categoria categoria, Usuario usuario) {
+    public Servicio() {
+    }
+
+    // Constructor
+    public Servicio(int idServicio, String titulo, String descripcion, int modalidad, int estatus, int idUsuario) {
         this.idServicio = idServicio;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.modalidad = modalidad;
         this.estatus = estatus;
-        this.categoria = categoria;
-        this.usuario = usuario;
+        this.idUsuario = idUsuario; // Inicializar idUsuario
     }
 
-    public Servicio() {
-    }
-
+    // Getters y Setters
     public int getIdServicio() {
         return idServicio;
     }
@@ -70,20 +62,11 @@ public class Servicio {
         this.estatus = estatus;
     }
 
-    public Categoria getCategoria() {
-        return categoria;
+    public int getIdUsuario() { // Agregar getter para idUsuario
+        return idUsuario;
     }
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
+    public void setIdUsuario(int idUsuario) { // Agregar setter para idUsuario
+        this.idUsuario = idUsuario;
     }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-    
 }
