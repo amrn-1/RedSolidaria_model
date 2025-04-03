@@ -9,27 +9,33 @@ package org.utl.dsm.redsolidaria.model;
  * @author arlet
  */
 public class Usuario {
+
     private int idUsuario;
     private String nombre;
     private String apellidos;
     private String correo;
-    private String contrasena;
+    private String contrasenia;
     private Ciudad ciudad;
     private String foto;
     private String descripcion;
-    private String configuracionPrivacidad;
+    private int configuracionPrivacidad;
     private float reputacion;
     private float saldoHoras;
-    private int estadoVerificacion; 
-    private int estatus; 
+    private int estadoVerificacion;
+    private int estatus;
     private boolean preferenciasEmail;
+    private String lastToken;
+    private String dateLastToken;
 
-    public Usuario(int idUsuario, String nombre, String apellidos, String correo, String contrasena, Ciudad ciudad, String foto, String descripcion, String configuracionPrivacidad, float reputacion, float saldoHoras, int estadoVerificacion, int estatus, boolean preferenciasEmail) {
+    public Usuario() {
+    }
+
+    public Usuario(int idUsuario, String nombre, String apellidos, String correo, String contrasenia, Ciudad ciudad, String foto, String descripcion, int configuracionPrivacidad, float reputacion, float saldoHoras, int estadoVerificacion, int estatus, boolean preferenciasEmail, String lastToken, String dateLastToken) {
         this.idUsuario = idUsuario;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.correo = correo;
-        this.contrasena = contrasena;
+        this.contrasenia = contrasenia;
         this.ciudad = ciudad;
         this.foto = foto;
         this.descripcion = descripcion;
@@ -39,9 +45,8 @@ public class Usuario {
         this.estadoVerificacion = estadoVerificacion;
         this.estatus = estatus;
         this.preferenciasEmail = preferenciasEmail;
-    }
-
-    public Usuario() {
+        this.lastToken = lastToken;
+        this.dateLastToken = dateLastToken;
     }
 
     public int getIdUsuario() {
@@ -76,12 +81,12 @@ public class Usuario {
         this.correo = correo;
     }
 
-    public String getContrasena() {
-        return contrasena;
+    public String getContrasenia() {
+        return contrasenia;
     }
 
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
     }
 
     public Ciudad getCiudad() {
@@ -108,11 +113,11 @@ public class Usuario {
         this.descripcion = descripcion;
     }
 
-    public String getConfiguracionPrivacidad() {
+    public int getConfiguracionPrivacidad() {
         return configuracionPrivacidad;
     }
 
-    public void setConfiguracionPrivacidad(String configuracionPrivacidad) {
+    public void setConfiguracionPrivacidad(int configuracionPrivacidad) {
         this.configuracionPrivacidad = configuracionPrivacidad;
     }
 
@@ -155,6 +160,23 @@ public class Usuario {
     public void setPreferenciasEmail(boolean preferenciasEmail) {
         this.preferenciasEmail = preferenciasEmail;
     }
-    
-    
+
+    public String getLastToken() {
+        return lastToken;
+    }
+
+    public void setLastToken(String lastToken) {
+        this.lastToken = lastToken;
+    }
+
+    public String getDateLastToken() {
+        return dateLastToken;
+    }
+
+    public void setDateLastToken(String dateLastToken) {
+        this.dateLastToken = dateLastToken;
+    }
+
+
+
 }
