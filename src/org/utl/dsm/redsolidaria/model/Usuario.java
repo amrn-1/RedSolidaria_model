@@ -18,7 +18,7 @@ public class Usuario {
     private Ciudad ciudad;
     private String foto;
     private String descripcion;
-    private int configuracionPrivacidad;
+    private boolean configuracionPrivacidad;
     private float reputacion;
     private float saldoHoras;
     private int estadoVerificacion;
@@ -30,7 +30,7 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(int idUsuario, String nombre, String apellidos, String correo, String contrasenia, Ciudad ciudad, String foto, String descripcion, int configuracionPrivacidad, float reputacion, float saldoHoras, int estadoVerificacion, int estatus, boolean preferenciasEmail, String lastToken, String dateLastToken) {
+    public Usuario(int idUsuario, String nombre, String apellidos, String correo, String contrasenia, Ciudad ciudad, String foto, String descripcion, boolean configuracionPrivacidad, float reputacion, float saldoHoras, int estadoVerificacion, int estatus, boolean preferenciasEmail, String lastToken, String dateLastToken) {
         this.idUsuario = idUsuario;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -113,11 +113,11 @@ public class Usuario {
         this.descripcion = descripcion;
     }
 
-    public int getConfiguracionPrivacidad() {
+    public boolean getConfiguracionPrivacidad() {
         return configuracionPrivacidad;
     }
 
-    public void setConfiguracionPrivacidad(int configuracionPrivacidad) {
+    public void setConfiguracionPrivacidad(boolean configuracionPrivacidad) {
         this.configuracionPrivacidad = configuracionPrivacidad;
     }
 
@@ -153,7 +153,7 @@ public class Usuario {
         this.estatus = estatus;
     }
 
-    public boolean isPreferenciasEmail() {
+    public boolean getPreferenciasEmail() {
         return preferenciasEmail;
     }
 
