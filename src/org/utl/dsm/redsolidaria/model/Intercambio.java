@@ -5,7 +5,6 @@
 package org.utl.dsm.redsolidaria.model;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 
 /**
  *
@@ -14,18 +13,18 @@ import java.time.LocalTime;
 public class Intercambio {
     private int idIntercambio;
     private LocalDate dia;
-    private LocalTime hora;
-    private int estatus; 
-    private int usuarioSolicitante;
-    private int usuarioOferente;
+    private String hora; // Cambiado de LocalTime a String
+    private int estatus;
+    private int idUsuarioSolicitante;
+    private int idUsuarioOferente;
 
-    public Intercambio(int idIntercambio, LocalDate dia, LocalTime hora, int estatus, int usuarioSolicitante, int usuarioOferente) {
+    public Intercambio(int idIntercambio, LocalDate dia, String hora, int estatus, int idUsuarioSolicitante, int idUsuarioOferente) {
         this.idIntercambio = idIntercambio;
         this.dia = dia;
         this.hora = hora;
         this.estatus = estatus;
-        this.usuarioSolicitante = usuarioSolicitante;
-        this.usuarioOferente = usuarioOferente;
+        this.idUsuarioSolicitante = idUsuarioSolicitante;
+        this.idUsuarioOferente = idUsuarioOferente;
     }
 
     public Intercambio() {
@@ -47,11 +46,11 @@ public class Intercambio {
         this.dia = dia;
     }
 
-    public LocalTime getHora() {
+    public String getHora() {
         return hora;
     }
 
-    public void setHora(LocalTime hora) {
+    public void setHora(String hora) {
         this.hora = hora;
     }
 
@@ -63,21 +62,31 @@ public class Intercambio {
         this.estatus = estatus;
     }
 
-    public int getUsuarioSolicitante() {
-        return usuarioSolicitante;
+    public int getIdUsuarioSolicitante() {
+        return idUsuarioSolicitante;
     }
 
-    public void setUsuarioSolicitante(int usuarioSolicitante) {
-        this.usuarioSolicitante = usuarioSolicitante;
+    public void setIdUsuarioSolicitante(int idUsuarioSolicitante) {
+        this.idUsuarioSolicitante = idUsuarioSolicitante;
     }
 
-    public int getUsuarioOferente() {
-        return usuarioOferente;
+    public int getIdUsuarioOferente() {
+        return idUsuarioOferente;
     }
 
-    public void setUsuarioOferente(int usuarioOferente) {
-        this.usuarioOferente = usuarioOferente;
+    public void setIdUsuarioOferente(int idUsuarioOferente) {
+        this.idUsuarioOferente = idUsuarioOferente;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Intercambio{" +
+                "idIntercambio=" + idIntercambio +
+                ", dia=" + dia +
+                ", hora=" + hora +
+                ", estatus=" + estatus +
+                ", idUsuarioSolicitante=" + idUsuarioSolicitante +
+                ", idUsuarioOferente=" + idUsuarioOferente +
+                '}';
+    }
 }
