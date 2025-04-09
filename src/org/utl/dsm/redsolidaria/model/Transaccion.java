@@ -1,16 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package org.utl.dsm.redsolidaria.model;
 
 import java.time.LocalDate;
 
-/**
- *
- * @author arlet
- */
 public class Transaccion {
+
     private int idTransaccion;
     private Intercambio intercambio;
     private Usuario oferente;
@@ -20,8 +13,17 @@ public class Transaccion {
     private String detalles;
     private boolean verificadoOferente;
     private boolean verificadoSolicitante;
+    private String tituloServicio;
+    private int estatus;
+    private float horasRecibidas; // Agregado
+    private float horasOfrecidas; // Agregado
+    private int intercambiosCompletados; // Agregado
 
-    public Transaccion(int idTransaccion, Intercambio intercambio, Usuario oferente, Usuario solicitante, float horasIntercambiadas, LocalDate fecha, String detalles, boolean verificadoOferente, boolean verificadoSolicitante) {
+    public Transaccion() {
+    }
+
+    public Transaccion(int idTransaccion, Intercambio intercambio, Usuario oferente, Usuario solicitante, float horasIntercambiadas,
+            LocalDate fecha, String detalles, boolean verificadoOferente, boolean verificadoSolicitante) {
         this.idTransaccion = idTransaccion;
         this.intercambio = intercambio;
         this.oferente = oferente;
@@ -33,9 +35,7 @@ public class Transaccion {
         this.verificadoSolicitante = verificadoSolicitante;
     }
 
-    public Transaccion() {
-    }
-
+    // Getters y setters existentes
     public int getIdTransaccion() {
         return idTransaccion;
     }
@@ -107,6 +107,45 @@ public class Transaccion {
     public void setVerificadoSolicitante(boolean verificadoSolicitante) {
         this.verificadoSolicitante = verificadoSolicitante;
     }
-    
-    
+
+    public String getTituloServicio() {
+        return tituloServicio;
+    }
+
+    public void setTituloServicio(String tituloServicio) {
+        this.tituloServicio = tituloServicio;
+    }
+
+    public int getEstatus() {
+        return estatus;
+    }
+
+    public void setEstatus(int estatus) {
+        this.estatus = estatus;
+    }
+
+    // Nuevos getters y setters
+    public float getHorasRecibidas() {
+        return horasRecibidas;
+    }
+
+    public void setHorasRecibidas(float horasRecibidas) {
+        this.horasRecibidas = horasRecibidas;
+    }
+
+    public float getHorasOfrecidas() {
+        return horasOfrecidas;
+    }
+
+    public void setHorasOfrecidas(float horasOfrecidas) {
+        this.horasOfrecidas = horasOfrecidas;
+    }
+
+    public int getIntercambiosCompletados() {
+        return intercambiosCompletados;
+    }
+
+    public void setIntercambiosCompletados(int intercambiosCompletados) {
+        this.intercambiosCompletados = intercambiosCompletados;
+    }
 }
