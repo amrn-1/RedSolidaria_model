@@ -4,7 +4,7 @@
  */
 package org.utl.dsm.redsolidaria.model;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  *
@@ -14,12 +14,12 @@ public class Mensaje {
     private int idMensaje;
     private String contenido;
     private int tipoContenido; 
-    private LocalDate fechaEnvio;
+    private LocalDateTime fechaEnvio;
     private int estatus; 
     private int idRemitente;
     private int idDestinatario;
 
-    public Mensaje(int idMensaje, String contenido, int tipoContenido, LocalDate fechaEnvio, int estatus, int idRemitente, int idDestinatario) {
+    public Mensaje(int idMensaje, String contenido, int tipoContenido, LocalDateTime fechaEnvio, int estatus, int idRemitente, int idDestinatario) {
         this.idMensaje = idMensaje;
         this.contenido = contenido;
         this.tipoContenido = tipoContenido;
@@ -56,11 +56,11 @@ public class Mensaje {
         this.tipoContenido = tipoContenido;
     }
 
-    public LocalDate getFechaEnvio() {
+    public LocalDateTime getFechaEnvio() {
         return fechaEnvio;
     }
 
-    public void setFechaEnvio(LocalDate fechaEnvio) {
+    public void setFechaEnvio(LocalDateTime fechaEnvio) {
         this.fechaEnvio = fechaEnvio;
     }
 
